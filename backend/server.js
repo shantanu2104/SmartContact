@@ -13,8 +13,8 @@ app.use(cors({
     "http://localhost:5173",
     "https://smart-contact-d76a.vercel.app"
   ],
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true
+  methods: ["GET", "POST", "DELETE", "PUT", "OPTIONS"],
+  allowedHeaders: ["Content-Type"],
 }));
 
 app.use(express.json());
