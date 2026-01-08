@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ContactForm from "./components/ContactForm";
 import ContactList from "./components/ContactList";
+import dummyForm from "./components/dummyForm";
 import { getContacts, addContact, deleteContact } from "./services/api";
 
 function App() {
@@ -31,7 +32,7 @@ const fetchContacts = async () => {
         <h1 className="text-3xl font-bold text-center mb-6">
           Contact Manager
         </h1>
-
+        <dummyForm/>
         <ContactForm onAdd={handleAdd} />
         <ContactList contacts={contacts} onDelete={handleDelete} />
       </div>
