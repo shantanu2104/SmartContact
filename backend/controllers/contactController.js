@@ -12,5 +12,5 @@ exports.getContacts = async (req, res) => {
 
 exports.deleteContact = async (req, res) => {
   await Contact.findByIdAndDelete(req.params.id);
-  res.json({ message: "Contact deleted" });
+  res.json({ message: "Contact deleted ok " });
 };
