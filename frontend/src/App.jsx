@@ -6,10 +6,10 @@ import { getContacts, addContact, deleteContact } from "./services/api";
 function App() {
   const [contacts, setContacts] = useState([]);
 
-  const fetchContacts = async () => {
-    const res = await getContacts();
-    setContacts(res.data);
-  };
+const fetchContacts = async () => {
+  const res = await getContacts();
+  setContacts(res); // ✅ not res.data
+};
 
   useEffect(() => {
     fetchContacts();

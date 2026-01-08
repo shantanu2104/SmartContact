@@ -1,8 +1,8 @@
 const Contact = require("../models/Contact");
 
-exports.createContact = async (req, res) => {
-  const contact = await Contact.create(req.body);
-  res.status(201).json(contact);
+exports.getContacts = async (req, res) => {
+  const contacts = await Contact.find().sort({ createdAt: -1 });
+  res.status(200).json(contacts);
 };
 
 exports.getContacts = async (req, res) => {

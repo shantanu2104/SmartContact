@@ -7,6 +7,11 @@ dotenv.config();
 connectDB();
 
 const app = express();
+const cors = require("cors");
+
+app.use(cors({
+  origin: "*"
+}));
 
 // 🔥 CORS FIX (Vercel safe)
 app.use((req, res, next) => {
